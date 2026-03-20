@@ -57,6 +57,8 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--accent2-color);
+    color: #fff;
+    padding: 0 10px;
 }
 
 nav a:hover {
@@ -98,7 +100,6 @@ main {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 70%;
     padding: 16px;
     background-color: var(--accent1-color);
     color: white;
@@ -108,7 +109,13 @@ main {
 .hero article img {
     float: right;
     width: 125px;
+    height: 125px;
+    object-fit: cover;
     margin-left: 10px;
+}
+
+.article p {
+    text-align: left;
 }
 
 /* HEADINGS */
@@ -120,8 +127,29 @@ h2 {
 
 /* SECTIONS */
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: var(--spacing);
     padding: var(--spacing);
+}
+
+section h2,
+p {
+    color: #fff;
+}
+
+.history p {
+    text-align: center;
+}
+
+section {
+    background: var(--accent1-color);
+}
+
+section p {
+    padding-top: 20px;
 }
 
 /* FOOTER */
@@ -129,7 +157,12 @@ footer {
     text-align: center;
 }
 
+footer p {
+    color: var(--accent1-color);
+}
+
 /* REMOVE UNDERLINE IN SOCIAL LINKS */
-.socialmedia a {
-    text-decoration: none;
+.socialmedia img {
+    width: 25px;
+    height: 25px;
 }
