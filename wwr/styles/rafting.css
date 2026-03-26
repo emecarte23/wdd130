@@ -42,7 +42,9 @@ header {
 }
 
 header img {
-    width: 80px;
+    display: flex;
+    justify-content: flex-start;
+    width: 90px;
 }
 
 /* NAV */
@@ -163,4 +165,24 @@ footer p {
 .socialmedia img {
     width: 25px;
     height: 25px;
+}
+
+.history {
+    text-align: center;
+    padding: 2rem;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.history-content p {
+    flex: 1;
+}
+
+.history-content img {
+    width: 200px;
+    height: auto;
 }
