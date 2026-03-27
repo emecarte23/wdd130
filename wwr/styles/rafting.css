@@ -30,7 +30,7 @@ main,
 footer {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: var(--spacing);
+    padding: 0;
 }
 
 /* HEADER */
@@ -56,7 +56,6 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--accent2-color);
     color: #fff;
     padding: 0 10px;
 }
@@ -131,21 +130,18 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing);
+    margin: 0;
     padding: var(--spacing);
+    background: var(--accent1-color);
 }
 
 section h2,
-p {
+section p {
     color: #fff;
 }
 
 .history p {
     text-align: center;
-}
-
-section {
-    background: var(--accent1-color);
 }
 
 section p {
@@ -155,12 +151,13 @@ section p {
 /* FOOTER */
 footer {
     text-align: center;
-    background: var(--primary);
     padding: 15px;
+    background: #004A80;
+    margin-top: 20px;
 }
 
 footer p {
-    color: var(--accent1-color);
+    color: #fff;
 }
 
 /* REMOVE UNDERLINE IN SOCIAL LINKS */
@@ -172,6 +169,7 @@ footer p {
 .history {
     text-align: center;
     padding: 2rem;
+    margin: 0;
 }
 
 .history-content {
@@ -193,28 +191,74 @@ footer p {
     padding: 20px;
 }
 
+/* UPDATED GALLERY */
 .adventure-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
     margin-top: 15px;
-
+    width: 100%;
 }
 
 .adventure-gallery figure {
     text-align: center;
+    width: 100%;
 }
 
 .adventure-gallery img {
-    width: 140px;
-    height: 140px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     background: #ddd;
 }
 
 .adventure-gallery figcaption {
-    padding: 15px;
+    padding: 10px 5px 0;
     font-weight: bold;
     color: #ddd;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .history-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        position: static;
+    }
+
+    .hero article {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 10px auto 0;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
 }
