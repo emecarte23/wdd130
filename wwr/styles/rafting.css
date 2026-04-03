@@ -247,7 +247,8 @@ footer p {
     }
 
     .hero article {
-        position: static;
+        position: static
+        
         margin-top: 10px;
     }
 
