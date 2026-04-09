@@ -161,7 +161,7 @@ footer {
 }
 
 footer p {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 /* REMOVE UNDERLINE IN SOCIAL LINKS */
