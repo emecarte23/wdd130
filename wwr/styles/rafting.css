@@ -126,7 +126,7 @@ main {
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
 /* SECTIONS */
@@ -271,8 +271,8 @@ footer p {
 .contact-header-info {
     text-align: center;
     padding: 40px 20px;
-    background-color: var(--accent2-color);
-    color: var(--text-on-dark);
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
 .contact-grid {
