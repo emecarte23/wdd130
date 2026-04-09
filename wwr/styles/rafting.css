@@ -371,3 +371,140 @@ fieldset label {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- TRIPS PAGE SPECIFIC STYLES --- */
+
+/* Call to Action Section */
+.trips-cta {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+.book-now-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.book-now-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Trip Highlights (Zig-Zag Layout) */
+.trip-container {
+    background-color: #fff;
+    /* White background for better readability */
+    padding: 40px 20px;
+}
+
+.trip-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trip-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.trip-card img {
+    width: 40%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trip-info {
+    flex: 1;
+}
+
+.trip-info h3 {
+    color: var(--accent1-color);
+    margin-bottom: 10px;
+}
+
+.trip-info p {
+    color: #444;
+    /* Darker text for readability against white */
+    padding-top: 0;
+    /* Override the general section p padding */
+}
+
+/* Alternate the layout for the second card */
+.trip-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Trip Comparison Table */
+.trip-details-table {
+    background-color: var(--accent1-color);
+    padding: 40px 20px;
+    color: white;
+}
+
+.trip-details-table h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Adjustments for Trips */
+@media (max-width: 768px) {
+
+    .trip-card,
+    .trip-card.reverse {
+        flex-direction: column;
+    }
+
+    .trip-card img {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 10px 5px;
+    }
+}
