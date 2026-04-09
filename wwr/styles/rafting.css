@@ -33,34 +33,44 @@ footer {
 }
 
 /* HEADER */
+/* HEADER - Updated to use CSS Grid */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Logo takes its own space, Nav takes the rest */
     align-items: center;
+    /* Vertical centering */
     background-color: var(--primary-color);
+    padding: 10px 20px;
+    /* Added some padding for design uniformity */
 }
 
 header img {
-    display: flex;
-    justify-content: flex-start;
     width: 90px;
+    height: auto;
 }
 
 /* NAV */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the navigation links to the right */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    /* Rubric requirement: Flex for nav layout */
+    gap: 20px;
+    /* Consistent spacing between links */
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    padding: 0 10px;
-}
-
-nav a:hover {
-    color: var(--secondary-color);
+    font-weight: bold;
 }
 
 /* MAIN */
