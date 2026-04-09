@@ -1,6 +1,7 @@
 :root {
     --primary-color: #005A99;
     --accent1-color: #004A80;
+    --accent2-color: #ffffff;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
     --max-width: 840px;
@@ -141,7 +142,7 @@ section {
 
 section h2,
 section p {
-    color: #fff;
+    color: var(--accent2-color);
 }
 
 .history p {
@@ -161,7 +162,7 @@ footer {
 }
 
 footer p {
-    color: var(--primary-color);
+    color: #fff;
 }
 
 /* REMOVE UNDERLINE IN SOCIAL LINKS */
@@ -270,7 +271,7 @@ footer p {
 .contact-header-info {
     text-align: center;
     padding: 40px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
     color: var(--text-on-dark);
 }
 
