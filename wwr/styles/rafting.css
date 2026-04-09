@@ -37,12 +37,13 @@ footer {
 header {
     display: grid;
     grid-template-columns: auto 1fr;
-    /* Logo takes its own space, Nav takes the rest */
+    /* Logo in one col, Nav in the other */
     align-items: center;
-    /* Vertical centering */
+    /* Uniform alignment */
+    max-width: var(--max-width);
+    margin: 0 auto;
     background-color: var(--primary-color);
-    padding: 10px 20px;
-    /* Added some padding for design uniformity */
+    padding: 10px;
 }
 
 header img {
@@ -54,23 +55,20 @@ header img {
 nav {
     display: flex;
     justify-content: flex-end;
-    /* Aligns the navigation links to the right */
+    /* Pushes links to the right */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    /* Rubric requirement: Flex for nav layout */
-    gap: 20px;
-    /* Consistent spacing between links */
-    margin: 0;
-    padding: 0;
+    /* Horizontal layout via Flex */
+    gap: 15px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    padding: 5px 10px;
 }
 
 /* MAIN */
