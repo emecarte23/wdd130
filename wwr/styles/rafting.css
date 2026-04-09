@@ -31,8 +31,6 @@ footer {
     padding: 0;
 }
 
-/* HEADER */
-/* HEADER - Updated to use CSS Grid */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -265,6 +263,110 @@ footer p {
     }
 
     .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-header-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-on-dark);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px 40px;
+    align-items: start;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #ccc;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-family: var(--heading-font);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.submit-btn {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #999;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Team Section */
+.team-section {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin: 40px 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.employee-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.employee-gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee-gallery img {
+    width: 120px;
+    height: 120px;
+    background-color: #ccc;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .contact-grid,
+    .employee-gallery {
         grid-template-columns: 1fr;
     }
 }
